@@ -5,7 +5,7 @@ namespace model
 {
     public class EmpleadosContext : DbContext  
     {
-        public NotasContext(DbContextOptions<EmpleadosContext> options)
+        public EmpleadosContext(DbContextOptions<EmpleadosContext> options)
          : base(options)
         {}
 
