@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace model
+namespace EmpresaIT.Models
 {
     public class EmpleadosContext : DbContext  
     {

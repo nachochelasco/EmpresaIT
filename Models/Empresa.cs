@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace model
+namespace EmpresaIT.Models
 {
     public class Empresa
     {
