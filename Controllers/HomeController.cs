@@ -12,15 +12,17 @@ namespace EmpresaIT.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly EmpleadosContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, EmpleadosContext empleadosContext)
         {
             _logger = logger;
+            db = empleadosContext ;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(db.Empleados.ToList());
         }
 
         public IActionResult Privacy()

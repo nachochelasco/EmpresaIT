@@ -1,8 +1,32 @@
-﻿@{
+﻿@model IEnumerable<EmpresaIT.Models.Empleado>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Empleados</h1>
+</div>
+    <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in Model) {
+                    <div class="card col-md-3 col-sm-12 text-center">
+                        <div class="imagenEmpleado">
+                            <img src="empleado.jpg" class="card-img-top"/>
+                        </div>
+
+                        <div class="nombreEmpleado">
+                            @Html.DisplayFor(modelItem => item.NombreCompleto)
+                        </div>
+
+                        <div class="puestoEmpleado">
+                            @Html.DisplayFor(modelItem => item.PuestoDeTrabajo)
+                        </div>
+
+                        <div class="button">
+                            <a href="#" class="btn btn-primary">Ver empleado</a>
+                        </div>
+                    </div>
+                }
+         </div>
+    </div>
 </div>

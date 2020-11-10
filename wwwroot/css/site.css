@@ -1,6 +1,32 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.card-img-top {
+  width: 80%;
+  height: 80%;
+  margin-top: 10%;
+}
+
+.card {
+  width: 40%;
+  height: 40%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+}
+
+.display-4 {
+  margin-bottom: 3%;
+}
+
+.btn {
+  margin-bottom: 10%;
+}
+
+.nombreEmpleado, .puestoEmpleado, .button{
+  margin-top: 5%;
+}
+
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
