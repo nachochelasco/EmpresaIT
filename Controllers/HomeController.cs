@@ -25,6 +25,17 @@ namespace EmpresaIT.Controllers
             return View(db.Empleados.ToList());
         }
 
+
+        [HttpGet]
+        public IActionResult Empleado(int id) {
+            Empleado empleado = db.Empleados.Find(id) ;
+            this.ViewBag.NombreCompleto = empleado.NombreCompleto ;
+            this.ViewBag.PuestoDeTrabajo = empleado.PuestoDeTrabajo ;
+            this.ViewBag.Email = empleado.Email ;
+            this.ViewBag.Sueldo = empleado.Sueldo ;
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

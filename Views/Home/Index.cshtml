@@ -10,21 +10,22 @@
             <div class="row">
                 @foreach (var item in Model) {
                     <div class="card col-md-3 col-sm-12 text-center">
-                        <div class="imagenEmpleado">
-                            <img src="empleado.jpg" class="card-img-top"/>
+                        <div class="imagenCardEmpleado">
+                            <img src="~/images/empleado.jpg" class="card-img-top"/>
                         </div>
 
-                        <div class="nombreEmpleado">
+                        <div class="nombreEmpl">
                            @item.NombreCompleto
                         </div>
 
-                        <div class="puestoEmpleado">
+                        <div class="puestoEmpl">
                             @item.PuestoDeTrabajo
                         </div>
 
                         <div class="button">
-                            <a href="#" class="btn btn-primary">Ver empleado</a>
+                        <a asp-controller="Home" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
                         </div>
+                    
                     </div>
                 }
          </div>
