@@ -5,6 +5,13 @@ for details on configuring this project to bundle and minify static web assets. 
   font-size:350%;
 }
 
+.datosEmpleado {
+  margin-top: 15%;
+}
+
+.emailEmpleado, .puestoEmpleado, .sueldoEmpleado {
+  margin-bottom: 5%;
+}
 img {
   margin-top: 15%;
   width: 150%;

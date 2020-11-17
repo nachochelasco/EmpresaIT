@@ -1,9 +1,19 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="classEmpleado">
                     <h1 class="nombreEmpleado">@ViewBag.NombreCompleto</h1>
+                </div>
+                <div class="datosEmpleado">
+                    <ul>
+                        <li><h3 class="emailEmpleado"> @ViewBag.Email</h3></li>
+                        <li><h3 class="puestoEmpleado">@ViewBag.PuestoDeTrabajo</h3></li>
+                        <li><h3 class="sueldoEmpleado">@ViewBag.Sueldo</h3></li>
+                    </ul>
                 </div>
                 
             </div>
