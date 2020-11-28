@@ -25,11 +25,20 @@ namespace EmpresaIT
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddControllersWithViews()
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.Name = ".Empleados.Session";
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            
+            });
+            services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-
+            
             services.AddDbContext<EmpleadosContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("EmpleadosContext")));
         }
@@ -53,6 +62,8 @@ namespace EmpresaIT
             app.UseRouting();
 
             app.UseAuthorization();
+
+	    app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

@@ -22,7 +22,9 @@ namespace EmpresaIT.Controllers
 
         public IActionResult Index()
         {
+  
             return View(db.Empleados.ToList());
+            
         }
 
 
