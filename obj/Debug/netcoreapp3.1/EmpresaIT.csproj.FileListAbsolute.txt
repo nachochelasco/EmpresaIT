@@ -173,3 +173,6 @@ C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netco
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Empleado.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\Account.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\AgregarEmpleado.cshtml.g.cs

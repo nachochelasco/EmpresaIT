@@ -20,5 +20,8 @@ namespace EmpresaIT.Models
 
         [Required]
         public int Sueldo {get;set;}
+
+        [Required]
+        public Empresa Empresa {get;set;}
     }
 }

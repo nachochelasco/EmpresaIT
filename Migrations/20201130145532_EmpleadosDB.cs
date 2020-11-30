@@ -2,7 +2,7 @@
 
 namespace EmpresaIT.Migrations
 {
-    public partial class CreacionInicial : Migration
+    public partial class EmpleadosDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +12,7 @@ namespace EmpresaIT.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Email = table.Column<string>(nullable: false),
                     Nombre = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -29,7 +30,7 @@ namespace EmpresaIT.Migrations
                     Email = table.Column<string>(nullable: false),
                     PuestoDeTrabajo = table.Column<string>(nullable: false),
                     Sueldo = table.Column<int>(nullable: false),
-                    EmpresaID = table.Column<int>(nullable: true)
+                    EmpresaID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -39,7 +40,7 @@ namespace EmpresaIT.Migrations
                         column: x => x.EmpresaID,
                         principalTable: "Empresas",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
