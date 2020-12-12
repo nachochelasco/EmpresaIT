@@ -48,11 +48,13 @@ namespace EmpresaIT.Controllers
                     return RedirectToAction("Index", "Home");
                 }
                 else {
-                    return Redirect("/Login/Account");
+                    ViewBag.ErrorEnLogin = true;
+                    return View("Account");
                 }
             } else {
-                return Redirect("/Login/Account");
-             }
+                ViewBag.ErrorEnLogin = true;
+                return View("Account");
+               }
             }
         }
     }

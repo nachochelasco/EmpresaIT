@@ -13,7 +13,7 @@
                    
                     <div class="card col-md-3 col-sm-12 text-center">
                         <div class="buttonDelete">
-                            <a class="btn btn-danger" href=/Home/EliminarEmpleado/@item.ID>
+                            <a class="btn btn-danger" href=/Home/EliminarEmpleado/@item.ID data-toggle="modal" data-target='#@("deleteConfirmModal"+item.ID)'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                                 </svg>
@@ -32,9 +32,32 @@
                         </div>
 
                         <div class="button">
-                        <a asp-controller="Home" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
-                           
+                            <a asp-controller="Home" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
+                        </div>
                     
+                        <!-- Modal Eliminar-->
+                        <div class="modal fade" id='@("deleteConfirmModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="deleteConfirmModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="deleteConfirmModalLabel">
+                                            <i class="fas fa-exclamation-triangle"></i>Atención: Va a eliminar un empleado
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="bodyModal">
+                                        Está seguro de querer eliminar al empleado @item.NombreCompleto ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">No</button>
+                                        <a class="btn btn-dark" href=/Home/EliminarEmpleado/@item.ID>Si</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 }

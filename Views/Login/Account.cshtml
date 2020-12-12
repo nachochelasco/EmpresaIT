@@ -1,3 +1,7 @@
+@{
+    bool errorEnLogin = ViewBag.ErrorEnLogin != null;
+}
+
 <h1>Iniciar Sesion</h1>
 <form method="POST" asp-action="Account" asp-controller="Login">
     <div class="form-group">
@@ -8,7 +12,12 @@
         <label for="exampleInputPassword1">Nombre</label>
         <input type="text" class="form-control" id="exampleInputPassword1" name="nombre" placeholder="Ingresa el nombre de la empresa" required>
     </div>
-        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-        <a type="text" class="btn btn-primary" asp-controller="Register" asp-action="Register">Registrar</a>
-    </div>
+    @if(errorEnLogin){
+        <div class="alert alert-danger" role="alert">
+            El email y/o nombre no son válidos.
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+    <a type="text" class="btn btn-primary" asp-controller="Register" asp-action="Register">Registrar</a>
 </form>
