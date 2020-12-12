@@ -94,6 +94,17 @@ namespace EmpresaIT.Controllers
             
         }
 
+
+        public IActionResult EliminarEmpleado(int ID)
+        {
+            Empleado empleado = db.Empleados.FirstOrDefault(e => e.ID == ID);
+            
+            db.Empleados.Remove(empleado);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult AgregarEmpleado()
         {
             return View() ;

@@ -5,6 +5,10 @@ for details on configuring this project to bundle and minify static web assets. 
   font-size:350%;
 }
 
+.buttonDelete {
+  text-align: right;
+}
+
 .datosEmpleado {
   margin-top: 15%;
 }
@@ -12,6 +16,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .emailEmpleado, .puestoEmpleado, .sueldoEmpleado {
   margin-bottom: 5%;
 }
+
 img {
   margin-top: 15%;
   width: 150%;

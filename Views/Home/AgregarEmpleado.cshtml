@@ -1,23 +1,26 @@
 <h1>Agregar Empleado</h1>
 <hr/>
-<div>
-    <form method="POST" asp-action="AgregarEmpleado" asp-controller="Home">
-        <div class="form-group">
-            <label for="titulo">Nombre</label>
-            <input class="form-control" type="text" name="nombreCompleto" placeholder="Ingrese su nombre completo" required /><br/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="POST" asp-action="AgregarEmpleado" asp-controller="Home">
+            <div class="form-group">
+                <label for="titulo">Nombre</label>
+                <input class="form-control" type="text" name="nombreCompleto" placeholder="Ingrese su nombre completo" required /><br/>
 
 
-            <label for="cuerpo">Email</label>
-            <input class="form-control" type="text" name="email" placeholder="Ingrese su email" required /><br/>
+                <label for="cuerpo">Email</label>
+                <input class="form-control" type="text" name="email" placeholder="Ingrese su email" required /><br/>
 
-            <label for="cuerpo">Puesto</label>
-            <input class="form-control" type="text" name="puesto" placeholder="Ingrese su puesto" required /><br/>
+                <label for="cuerpo">Puesto</label>
+                <input class="form-control" type="text" name="puesto" placeholder="Ingrese su puesto" required /><br/>
 
-            <label for="cuerpo">Sueldo</label>
-            <input class="form-control" type="text" name="sueldo" placeholder="Ingrese su sueldo" required /><br/>
+                <label for="cuerpo">Sueldo</label>
+                <input class="form-control" type="text" name="sueldo" placeholder="Ingrese su sueldo" required /><br/>
 
-            <button class="btn btn-success" type="submit" > Agregar </button>
-        </div>
-        
-    </form>
+                <button class="btn btn-success" type="submit" > Agregar </button>
+                
+            </div>
+        </form>
+       
+    </div>
 </div>

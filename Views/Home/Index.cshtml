@@ -10,7 +10,15 @@
     <div class="container-fluid">
             <div class="row">
                 @foreach (var item in Model) {
+                   
                     <div class="card col-md-3 col-sm-12 text-center">
+                        <div class="buttonDelete">
+                            <a class="btn btn-danger" href=/Home/EliminarEmpleado/@item.ID>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                            </a> 
+                        </div>
                         <div class="imagenCardEmpleado">
                             <img src="~/images/empleado.jpg" class="card-img-top"/>
                         </div>
@@ -25,8 +33,9 @@
 
                         <div class="button">
                         <a asp-controller="Home" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
-                        </div>
+                           
                     
+                        </div>
                     </div>
                 }
          </div>

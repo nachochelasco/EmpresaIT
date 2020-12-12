@@ -40,7 +40,7 @@ namespace EmpresaIT.Controllers
         [HttpPost]
         public  IActionResult Account(string email,string nombre) {
             {
-            Empresa empresaCheck = db.Empresas.FirstOrDefault(u => u.Nombre == nombre);
+            Empresa empresaCheck = db.Empresas.FirstOrDefault(u => u.Email == email);
             if(empresaCheck != null) 
             {
                 if(empresaCheck.Nombre == nombre) {
