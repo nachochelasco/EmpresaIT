@@ -48,6 +48,10 @@ img {
   margin-top: 5%;
 }
 
+.nav-item-salir {
+  margin-left: 100%;
+}
+
 
 a.navbar-brand {
   white-space: normal;
