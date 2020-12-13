@@ -98,6 +98,22 @@ namespace EmpresaIT.Controllers
 
             
         }
+        
+         [HttpPost]
+        public IActionResult Editar(int ID, string nombreCompleto, string email, int edad, string sexo, string puesto, int sueldo)
+        {
+            Empleado empleadoEdit = db.Empleados.FirstOrDefault(e => e.ID == ID);
+            empleadoEdit.Email = email;
+            empleadoEdit.Edad = edad ;
+            empleadoEdit.Sexo = sexo ;
+            empleadoEdit.PuestoDeTrabajo = puesto ;
+            empleadoEdit.Sueldo = sueldo ;
+
+            db.Empleados.Update(empleadoEdit);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
 
 
         public IActionResult EliminarEmpleado(int ID)
