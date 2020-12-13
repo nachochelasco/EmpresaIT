@@ -3,6 +3,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Empleados</h1>
     <a class="btn btn-success" asp-controller="Home" asp-action="AgregarEmpleado" >Agregar Empleado</a>
@@ -19,8 +20,14 @@
                                 </svg>
                             </a> 
                         </div>
-                        <div class="imagenCardEmpleado">
-                            <img src="~/images/empleado.jpg" class="card-img-top"/>
+                        
+                        <div class="imageEmpleado">
+                            @if(@item.Sexo == "Masculino") {
+                                <img src="~/images/empleado.jpg" class="card-img-top"/>
+                            }
+                            else {
+                                <img src="~/images/iconoEmpleada.png" class="card-img-bot"/>
+                            }                         
                         </div>
 
                         <div class="nombreEmpl">
@@ -33,6 +40,7 @@
 
                         <div class="button">
                             <a asp-controller="Home" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
+                            <a asp-controller="Home" class="btn btn-warning" asp-action="Empleado" asp-route-id=@item.ID>Editar</a>
                         </div>
                     
                         <!-- Modal Eliminar-->
@@ -43,14 +51,14 @@
                                 <div class="modal-content">
                                     <div class="modal-header" id="headerModal">
                                         <h5 class="modal-title" id="deleteConfirmModalLabel">
-                                            <i class="fas fa-exclamation-triangle"></i>Atención: Va a eliminar un empleado
+                                            <i class="fas fa-exclamation-triangle"></i>Atención: Estas a punto de eliminar a un/a empleado/a
                                         </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">×</span>
                                         </button>
                                     </div>
                                     <div class="modal-body" id="bodyModal">
-                                        Está seguro de querer eliminar al empleado @item.NombreCompleto ?
+                                        Está seguro de querer eliminar a @item.NombreCompleto de tus empleados/as ?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-dark" data-dismiss="modal">No</button>

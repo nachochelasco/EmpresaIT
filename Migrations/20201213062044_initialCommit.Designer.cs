@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmpresaIT.Migrations
 {
     [DbContext(typeof(EmpleadosContext))]
-    [Migration("20201130145532_EmpleadosDB")]
-    partial class EmpleadosDB
+    [Migration("20201213062044_initialCommit")]
+    partial class initialCommit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,6 +21,9 @@ namespace EmpresaIT.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Edad")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
@@ -35,6 +38,10 @@ namespace EmpresaIT.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PuestoDeTrabajo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Sexo")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

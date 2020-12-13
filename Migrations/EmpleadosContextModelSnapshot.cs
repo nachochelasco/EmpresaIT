@@ -21,6 +21,9 @@ namespace EmpresaIT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Edad")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -33,6 +36,10 @@ namespace EmpresaIT.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PuestoDeTrabajo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Sexo")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

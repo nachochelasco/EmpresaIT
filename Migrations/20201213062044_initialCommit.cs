@@ -2,7 +2,7 @@
 
 namespace EmpresaIT.Migrations
 {
-    public partial class EmpleadosDB : Migration
+    public partial class initialCommit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,8 @@ namespace EmpresaIT.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     NombreCompleto = table.Column<string>(nullable: false),
                     Email = table.Column<string>(nullable: false),
+                    Edad = table.Column<int>(nullable: false),
+                    Sexo = table.Column<string>(nullable: false),
                     PuestoDeTrabajo = table.Column<string>(nullable: false),
                     Sueldo = table.Column<int>(nullable: false),
                     EmpresaID = table.Column<int>(nullable: false)

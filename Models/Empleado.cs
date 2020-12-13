@@ -16,6 +16,12 @@ namespace EmpresaIT.Models
         public string Email {get;set;}
 
         [Required]
+        public int Edad {get;set;}
+
+        [Required]
+        public string Sexo {get;set;}
+
+        [Required]
         public string PuestoDeTrabajo {get;set;}
 
         [Required]

@@ -40,13 +40,15 @@ namespace EmpresaIT.Controllers
             Empleado empleado = db.Empleados.Find(id) ;
             this.ViewBag.NombreCompleto = empleado.NombreCompleto ;
             this.ViewBag.PuestoDeTrabajo = empleado.PuestoDeTrabajo ;
+            this.ViewBag.Sueldo = empleado.Sueldo ;
+            this.ViewBag.Edad = empleado.Edad ;
             this.ViewBag.Email = empleado.Email ;
             this.ViewBag.Sueldo = empleado.Sueldo ;
             return View();
         }
 
         [HttpPost]
-        public IActionResult AgregarEmpleado(string nombreCompleto, string email, string puesto, int sueldo) 
+        public IActionResult AgregarEmpleado(string nombreCompleto, string email, int edad, string sexo, string puesto, int sueldo) 
         {
             Empresa empresa = HttpContext.Session.Get<Empresa>("EmpresaLogueada");
             if ( empresa != null) {
@@ -55,10 +57,13 @@ namespace EmpresaIT.Controllers
                 Empleado nuevoEmpleado = new Empleado{
                 NombreCompleto = nombreCompleto,
                 Email = email,
+                Edad = edad,
+                Sexo = sexo,
                 PuestoDeTrabajo = puesto,
                 Sueldo = sueldo,
                 Empresa = empresaFind
                 };
+            
                 MailAddress to = new MailAddress(email);
                 MailAddress from = new MailAddress("grupo2comit@gmail.com");
                 MailMessage message = new MailMessage(from, to);
@@ -84,7 +89,7 @@ namespace EmpresaIT.Controllers
 
                 db.Empleados.Add(nuevoEmpleado);
                 db.SaveChanges();
-                return Redirect("/Home/Index");
+                return RedirectToAction("Index" ,"Home");
             }
             
             else {
