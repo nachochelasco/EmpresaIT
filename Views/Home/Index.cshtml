@@ -69,69 +69,67 @@
                         </div>
 
                          <!-- Modal Editar-->
-                    <div class="modal fade" id='@("editEmpleadoModal"+item.ID)' tabindex="-1" role="dialog"
-                        aria-labelledby="editEmpleadoModalLabel" data-backdrop="static" data-keyboard="false"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header" id="headerModal">
-                                    <h5 class="modal-title" id="editEmpleadoModalLabel">@item.NombreCompleto</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
+                        <div class="modal fade" id='@("editEmpleadoModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="editEmpleadoModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="editEmpleadoModalLabel">@item.NombreCompleto</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <form method="POST" asp-action="Editar">
+                                        <div class="modal-body" id="bodyModal">
+
+                                            <input type="hidden" name="ID" value="@item.ID">
+
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" value="@item.Email" class="form-control"
+                                                    name="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="edad">Edad</label>
+                                                <input type="text" value="@item.Edad" class="form-control"
+                                                    name="edad" required>
+                                            </div>
+
+                                            Género:
+                                                <select name="sexo">
+                                                    <option>Masculino</option>
+                                                    <option>Femenino</option>
+                                                </select><br/><br/>
+
+                                            Puesto:
+                                                <select name="puesto">
+                                                    <option>Desarrollador Trainee</option>
+                                                    <option>Desarrollador Junior</option>
+                                                    <option>Desarrollador Fullstack</option>
+                                                    <option>Desarrollador Senior</option>
+                                                    <option>Desarrollador Ssr</option>
+                                                    <option>QA Tester</option>
+                                                </select><br/><br/>
+
+                                            <div class="form-group">
+                                                <label for="sueldo">Sueldo</label>
+                                                <input type="text" value="@item.Sueldo" class="form-control"
+                                                    name="sueldo" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-dark">Guardar</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <form method="POST" asp-action="Editar">
-                                    <div class="modal-body" id="bodyModal">
-
-                                        <input type="hidden" name="ID" value="@item.ID">
-                                        
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="text" value="@item.Email" class="form-control"
-                                                name="email" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="edad">Edad</label>
-                                            <input type="text" value="@item.Edad" class="form-control"
-                                                name="edad" required>
-                                        </div>
-
-                                        Género:
-                                            <select name="sexo">
-                                                <option>Masculino</option>
-                                                <option>Femenino</option>
-                                            </select><br/><br/>
-
-                                        
-
-                                        Puesto:
-                                            <select name="puesto">
-                                                <option>Desarrollador Trainee</option>
-                                                <option>Desarrollador Junior</option>
-                                                <option>Desarrollador Fullstack</option>
-                                                <option>Desarrollador Senior</option>
-                                                <option>Desarrollador Ssr</option>
-                                                <option>QA Tester</option>
-                                            </select><br/><br/>
-
-                                        <div class="form-group">
-                                            <label for="sueldo">Sueldo</label>
-                                            <input type="text" value="@item.Sueldo" class="form-control"
-                                                name="sueldo" required>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
-                                        <button type="submit" class="btn btn-dark">Guardar</button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
-                </div>
-                }
+                    }
          </div>
     </div>
 </div>
