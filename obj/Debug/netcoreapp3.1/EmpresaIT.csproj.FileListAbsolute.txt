@@ -19,7 +19,6 @@ C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\EmpresaIT.RazorAssembly
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\EmpresaIT.TagHelpers.input.cache
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\EmpresaIT.TagHelpers.output.cache
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\EmpresaIT.RazorCoreGenerate.cache
-C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -172,7 +171,13 @@ C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win-x86\native
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Empleado.cshtml.g.cs
-C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\Account.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
-C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\AgregarEmpleado.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\AdminAccount.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\EmpleadoAccount.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AgregarEmpleado.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Empleado.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\UserAccount.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Empleado.cshtml.g.cs

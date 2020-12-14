@@ -1,0 +1,135 @@
+@model IEnumerable<EmpresaIT.Models.Empleado>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Empleados</h1>
+    <a class="btn btn-success" asp-controller="Admin" asp-action="AgregarEmpleado" >Agregar Empleado</a>
+</div>
+    <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in Model) {
+                   
+                    <div class="card col-md-3 col-sm-12 text-center">
+                        <div class="buttonDelete">
+                            <a class="btn btn-danger" href=/Admin/EliminarEmpleado/@item.ID data-toggle="modal" data-target='#@("deleteConfirmModal"+item.ID)'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                            </a> 
+                        </div>
+                        
+                        <div class="imageEmpleado">
+                            @if(@item.Sexo == "Masculino") {
+                                <img src="~/images/iconoEmpleado.png" class="card-img-top"/>
+                            }
+                            else {
+                                <img src="~/images/iconoEmpleada.png" class="card-img-bot"/>
+                            }                         
+                        </div>
+
+                        <div class="nombreEmpl">
+                           @item.NombreCompleto
+                        </div>
+
+                        <div class="puestoEmpl">
+                            @item.PuestoDeTrabajo
+                        </div>
+
+                        <div class="button">
+                            <a asp-controller="Admin" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
+                            <a asp-controller="Admin" class="btn btn-warning" data-toggle="modal" data-target='#@("editEmpleadoModal"+item.ID)'>Editar</a>
+                        </div>
+                    
+                        <!-- Modal Eliminar-->
+                        <div class="modal fade" id='@("deleteConfirmModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="deleteConfirmModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="deleteConfirmModalLabel">
+                                            <i class="fas fa-exclamation-triangle"></i>Atención: Estas a punto de eliminar a un/a empleado/a
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="bodyModal">
+                                        Está seguro de querer eliminar a @item.NombreCompleto de tus empleados/as ?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">No</button>
+                                        <a class="btn btn-dark" href=/Admin/EliminarEmpleado/@item.ID>Si</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Modal Editar-->
+                        <div class="modal fade" id='@("editEmpleadoModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="editEmpleadoModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="editEmpleadoModalLabel">@item.NombreCompleto</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <form method="POST" asp-action="Editar">
+                                        <div class="modal-body" id="bodyModal">
+
+                                            <input type="hidden" name="ID" value="@item.ID">
+
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" value="@item.Email" class="form-control"
+                                                    name="email" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="edad">Edad</label>
+                                                <input type="text" value="@item.Edad" class="form-control"
+                                                    name="edad" required>
+                                            </div>
+
+                                            Género:
+                                                <select name="sexo">
+                                                    <option>Masculino</option>
+                                                    <option>Femenino</option>
+                                                </select><br/><br/>
+
+                                            Puesto:
+                                                <select name="puesto">
+                                                    <option>Desarrollador Trainee</option>
+                                                    <option>Desarrollador Junior</option>
+                                                    <option>Desarrollador Fullstack</option>
+                                                    <option>Desarrollador Senior</option>
+                                                    <option>Desarrollador Ssr</option>
+                                                    <option>QA Tester</option>
+                                                </select><br/><br/>
+
+                                            <div class="form-group">
+                                                <label for="sueldo">Sueldo</label>
+                                                <input type="text" value="@item.Sueldo" class="form-control"
+                                                    name="sueldo" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-dark">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+         </div>
+    </div>
+</div>

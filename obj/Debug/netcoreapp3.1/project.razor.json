@@ -14402,8 +14402,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Admin\\AgregarEmpleado.cshtml",
+      "TargetPath": "Views\\Admin\\AgregarEmpleado.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\UserAccount.cshtml",
+      "TargetPath": "Views\\Login\\UserAccount.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14412,13 +14422,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\Account.cshtml",
-      "TargetPath": "Views\\Login\\Account.cshtml",
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\AdminAccount.cshtml",
+      "TargetPath": "Views\\Login\\AdminAccount.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Admin\\Empleado.cshtml",
+      "TargetPath": "Views\\Admin\\Empleado.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14427,23 +14442,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\User\\Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Home\\AgregarEmpleado.cshtml",
-      "TargetPath": "Views\\Home\\AgregarEmpleado.cshtml",
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Home\\Empleado.cshtml",
-      "TargetPath": "Views\\Home\\Empleado.cshtml",
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\User\\Empleado.cshtml",
+      "TargetPath": "Views\\User\\Empleado.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\EmpleadoAccount.cshtml",
+      "TargetPath": "Views\\Login\\EmpleadoAccount.cshtml",
       "FileKind": "mvc"
     }
   ],

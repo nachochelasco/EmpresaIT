@@ -1,0 +1,40 @@
+@model IEnumerable<EmpresaIT.Models.Empleado>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Empleados</h1>
+</div>
+    <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in Model) {
+                   
+                    <div class="card col-md-3 col-sm-12 text-center">
+                        
+                        <div class="imageEmpleado">
+                            @if(@item.Sexo == "Masculino") {
+                                <img src="~/images/iconoEmpleado.png" class="card-img-top"/>
+                            }
+                            else {
+                                <img src="~/images/iconoEmpleada.png" class="card-img-bot"/>
+                            }                         
+                        </div>
+
+                        <div class="nombreEmpl">
+                           @item.NombreCompleto
+                        </div>
+
+                        <div class="puestoEmpl">
+                            @item.PuestoDeTrabajo
+                        </div>
+
+                        <div class="button">
+                            <a asp-controller="User" class="btn btn-info" asp-action="Empleado" asp-route-id=@item.ID>Ver empleado</a>
+                        </div>
+                    
+                    </div>   
+                }
+            </div>
+    </div>

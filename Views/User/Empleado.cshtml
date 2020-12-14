@@ -1,0 +1,26 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="classEmpleado">
+                    <h1 class="nombreEmpleado">@ViewBag.NombreCompleto</h1>
+                </div>
+                <div class="datosEmpleado">
+                    <ul>
+                        <li><h3 class="emailEmpleado"> @ViewBag.Email</h3></li>
+                        <li><h3 class="emailEmpleado"> @ViewBag.Edad años</h3></li>
+                        <li><h3 class="puestoEmpleado">@ViewBag.PuestoDeTrabajo</h3></li>
+                        <li><h3 class="sueldoEmpleado">El sueldo de cada empleado no se encuentra disponible</h3></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+             <div class="col-md-6 col-sm-12">
+                 <div class="imageEmp" >
+                    <img class="img-empleado" src="~/images/empleadoOficina.jpg"/>
+                </div>
+             </div>
