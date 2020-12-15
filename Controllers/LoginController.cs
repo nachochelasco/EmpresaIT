@@ -53,11 +53,11 @@ namespace EmpresaIT.Controllers
                     return RedirectToAction("Index", "Admin");
                 }
                 else {
-                    ViewBag.ErrorEnLogin = true;
+                    ViewBag.ErrorEnLoginAdmin = true;
                     return View("AdminAccount");
                 }
             } else {
-                ViewBag.ErrorEnLogin = true;
+                ViewBag.ErrorEnLoginAdmin = true;
                 return View("AdminAccount");
                }
             }
@@ -74,11 +74,11 @@ namespace EmpresaIT.Controllers
                     return RedirectToAction("Index", "User");
                 }
                 else {
-                    ViewBag.ErrorEnLogin = true;
+                    ViewBag.ErrorEnLoginUser = true;
                     return View("UserAccount");
                 }
             } else {
-                ViewBag.ErrorEnLogin = true;
+                ViewBag.ErrorEnLoginUser = true;
                 return View("UserAccount");
                }
             }
