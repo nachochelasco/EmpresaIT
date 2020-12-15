@@ -14452,6 +14452,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_LayoutSinNavbar.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutSinNavbar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_LayoutLoginRegister.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutLoginRegister.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Admin\\Index.cshtml",
       "TargetPath": "Views\\Admin\\Index.cshtml",
       "FileKind": "mvc"
@@ -14464,11 +14474,6 @@
     {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\EmpleadoAccount.cshtml",
-      "TargetPath": "Views\\Login\\EmpleadoAccount.cshtml",
       "FileKind": "mvc"
     }
   ],

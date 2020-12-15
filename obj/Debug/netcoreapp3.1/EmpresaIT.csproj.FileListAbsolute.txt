@@ -173,7 +173,6 @@ C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcor
 C:\Users\Nacho\Desktop\EmpresaIT\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\AdminAccount.cshtml.g.cs
-C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\EmpleadoAccount.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AgregarEmpleado.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Empleado.cshtml.g.cs
@@ -181,3 +180,5 @@ C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Login\UserAccount.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Empleado.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutSinNavbar.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLoginRegister.cshtml.g.cs
