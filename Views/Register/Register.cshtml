@@ -1,16 +1,33 @@
 @{
     Layout = "~/Views/Shared/_LayoutLoginRegister.cshtml";
 }
-<h1>Register</h1>
-<form method="POST" asp-action="Register" asp-controller="Register">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="columnaIzquierda col-md-4 col-sm-12"></div>
+        <div class="columnaCentral col-md-4 col-sm-12">
+            <form method="POST" class="form-register" asp-action="Register" asp-controller="Register">
+                <h1 class="titulo-register">Registrar Empresa</h1>
+                <div class="form-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                    </svg>
+                    <input type="email" class="form-control" name="email" placeholder="Ingrese un email disponible" required>
+                </div>
+                <div class="form-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                    </svg> 
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese un nombre de empresa" required>
+                </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button><br/><br/>
+                    <p class="condicionesUso">Al registrarte, aceptas nuestras Condiciones de uso y Politica de privacidad</p><hr>
+                    <p>¿ Ya tienes cuenta ?</p>
+                    <a type="text" class="btn btn-primary" asp-controller="Login" asp-action="AdminAccount">Iniciar Sesion</a>
+            </form>
+             <a href="/Home/Index">Volver a Home</a>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Nombre</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="nombre" required>
-    </div>
-        <button type="submit" class="btn btn-primary">Register</button>
-    </div>
-</form>
+</div>

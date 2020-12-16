@@ -6,6 +6,9 @@ body {
 input {
   margin-top: 2%;
 }
+.condicionesUso {
+  font-weight: bold;
+}
 h1 {
   margin-top: 5%;
   text-align: center;
@@ -15,10 +18,19 @@ h1 {
   background-color: #dfdfdf;
 }
 
+.form-register {
+  padding: 30px;
+  background-color:white;
+  text-align: center;
+  margin-top: 15%;
+  border-radius: 1%
+}
+
 .form-login {
   padding: 30px;
   background-color:white;
   text-align: center;
+  border-radius: 1%
   
 }
 
