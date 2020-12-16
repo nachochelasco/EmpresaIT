@@ -4,8 +4,10 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="columnaIzquierda col-md-4 col-sm-12"></div>
-        <div class="columnaCentral col-md-4 col-sm-12">
+        <div class="columnaIzquierda col-md-6 col-sm-12">
+             <img class="foto-register" src="~/images/foto-register.jpg" />
+        </div>
+        <div class="columnaCentral col-md-5 col-sm-12">
             <form method="POST" class="form-register" asp-action="Register" asp-controller="Register">
                 <h1 class="titulo-register">Registrar Empresa</h1>
                 <div class="form-group">
@@ -25,7 +27,7 @@
                     <button type="submit" class="btn btn-primary">Registrar</button><br/><br/>
                     <p class="condicionesUso">Al registrarte, aceptas nuestras Condiciones de uso y Politica de privacidad</p><hr>
                     <p>¿ Ya tienes cuenta ?</p>
-                    <a type="text" class="btn btn-primary" asp-controller="Login" asp-action="AdminAccount">Iniciar Sesion</a>
+                    <a type="text" class="btn btn-link" asp-controller="Login" asp-action="AdminAccount">Iniciar Sesion</a>
             </form>
              <a href="/Home/Index">Volver a Home</a>
         </div>
