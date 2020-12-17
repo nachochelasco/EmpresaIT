@@ -49,5 +49,12 @@ namespace EmpresaIT.Controllers
             this.ViewBag.Sueldo = empleado.Sueldo ;
             return View();
         }
+
+
+        public IActionResult SacarEmpleadoEnSesion()
+        {
+            HttpContext.Session.Remove("EmpleadoLogueado");
+            return RedirectToAction("Index", "Home") ;
+        }
     }
 }
