@@ -25,9 +25,10 @@ namespace EmpresaIT.Controllers
         public  IActionResult Index()
         {
             Empleado empleado = HttpContext.Session.Get<Empleado>("EmpleadoLogueado");
-            Empresa empresaEmpleado = db.Empleados.Include(e => e.Empresa).FirstOrDefault(e => e.ID == empleado.ID).Empresa ;
+            
 
             if ( empleado != null) {
+                Empresa empresaEmpleado = db.Empleados.Include(e => e.Empresa).FirstOrDefault(e => e.ID == empleado.ID).Empresa ;
                 List<Empleado> empleadosList = new List<Empleado>();
                 
                 empleadosList = db.Empleados.Where(e => e.Empresa.Nombre.Equals(empresaEmpleado.Nombre)).ToList() ;   

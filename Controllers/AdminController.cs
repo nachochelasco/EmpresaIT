@@ -70,8 +70,17 @@ namespace EmpresaIT.Controllers
                 MailMessage message = new MailMessage(from, to);
 
                 message.Subject = "Bienvenido a " + empresa.Nombre ;
-                message.Body = "Hola " + nombreCompleto + ". Esperamos que te encuentres muy bien, te damos la bienvenida a " + empresa.Nombre + ". A continuacion te vamos a estar enviando una serie de cuestionarios que necesitamos que completes con toda tu informacion. Estamos a disposicion por cualquier consulta que tengas.";
+                message.Body = "<h3>Hola " + nombreCompleto + "</h3>" +
+                                "<div><p>Esperamos que te encuentres muy bien, te damos la bienvenida a " + empresa.Nombre + ". A continuacion te vamos a estar enviando una serie de formularios que necesitamos que completes con toda tu informacion.</p></div>"+
+                                "<div><p>Para acceder a la aplicacion se te dará una cuenta , la cual posee un email y un nombre de usuario.</div></p>" +
+                                "<div><p>Tus datos son los siguientes :</div></p> " +
+                                "<ul><li><div><p>Email :" + email + "</li></div></p>" +
+                                "<li><div><p>Nombre :" + nombreCompleto + "</li></div></p></ul>" +
+                                "<div><p>Estamos a disposicion por cualquier consulta que tengas.</p></div>"+
+                                "<div><p>Saludos Cordiales</div></p>";
+               
 
+                message.IsBodyHtml = true;
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
                 {
                     UseDefaultCredentials = false,
