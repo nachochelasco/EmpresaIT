@@ -1,6 +1,17 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutSinNavbar.cshtml";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
-<h1>Bienvenidos a EmpresaIT</h1>
-<a href="/Login/AdminAccount">Admin Login</a>
-<a href="/Login/UserAccount">User Login</a>
+<h1 class="titulo-home">Bienvenidos a EmpresaIT</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <p class="p-home">Para poder utilizar la aplicacion, es necesario que inicies sesion.</p>
+            <p class="p-admin">Si sos administrador, por favor haz click en el siguiente boton</p>
+            <a asp-controller="Login" asp-action="AdminAccount" class="btn btn-info">Admin Login</a>
+            <p class="p-user">Si sos empleado, por favor haz click en el siguiente boton e ingrese con la cuenta asignada por la empresa.</p>
+
+            <a asp-controller="Login" asp-action="UserAccount" class="btn btn-info">User Login</a>
+        </div>
+    </div>
+</div>
+

@@ -182,3 +182,4 @@ C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\User\Empleado.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutSinNavbar.cshtml.g.cs
 C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLoginRegister.cshtml.g.cs
+C:\Users\Nacho\Desktop\EmpresaIT\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutHome.cshtml.g.cs
