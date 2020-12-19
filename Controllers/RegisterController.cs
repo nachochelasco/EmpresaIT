@@ -27,18 +27,19 @@ namespace EmpresaIT.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(string email, string nombre)
+        public IActionResult Register(string email, string nombre,string contraseña)
         {
             Empresa nuevaEmpresa = new Empresa
             {
                 Email = email,
-                Nombre = nombre
+                Nombre = nombre,
+                Contraseña = contraseña
             };
 
             db.Empresas.Add(nuevaEmpresa);
             db.SaveChanges();
             HttpContext.Session.Set<Empresa>("EmpresaLogueada", nuevaEmpresa);
-            return Redirect("/Home/Index");
+            return Redirect("/Login/AdminAccount");
 
         }
     }

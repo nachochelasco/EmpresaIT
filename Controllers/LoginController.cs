@@ -23,11 +23,11 @@ namespace EmpresaIT.Controllers
             db = context;
         }
 
-        public JsonResult AgregarEmpresaALaSession(string email,string nombre)
+        public JsonResult AgregarEmpresaALaSession(string email,string contraseña)
         {
             Empresa nuevaEmpresa = new Empresa{
                 Email = email,
-                Nombre = nombre
+                Contraseña = contraseña
             };
 
             HttpContext.Session.Set<Empresa>("EmpresaLogueada", nuevaEmpresa);
@@ -43,13 +43,13 @@ namespace EmpresaIT.Controllers
         }
 
         [HttpPost]
-        public  IActionResult AdminAccount(string email,string nombre) {
+        public  IActionResult AdminAccount(string email,string contraseña) {
             {
-            Empresa empresaCheck = db.Empresas.FirstOrDefault(u => u.Email == email && u.Nombre == nombre);
+            Empresa empresaCheck = db.Empresas.FirstOrDefault(u => u.Email == email);
             if(empresaCheck != null) 
             {
-                if(empresaCheck.Nombre == nombre) {
-                    AgregarEmpresaALaSession(email,nombre) ;
+                if(empresaCheck.Contraseña == contraseña) {
+                    AgregarEmpresaALaSession(email,contraseña) ;
                     return RedirectToAction("Index", "Admin");
                 }
                 else {
@@ -64,12 +64,12 @@ namespace EmpresaIT.Controllers
         }
 
         [HttpPost]
-        public  IActionResult UserAccount(string email,string nombre) {
+        public  IActionResult UserAccount(string email,string contraseña) {
             {
-            Empleado userCheck = db.Empleados.FirstOrDefault(e => e.Email == email && e.NombreCompleto == nombre);
+            Empleado userCheck = db.Empleados.FirstOrDefault(e => e.Email == email);
             if(userCheck != null) 
             {
-                if(userCheck.NombreCompleto == nombre) {
+                if(userCheck.Contraseña == contraseña) {
                     HttpContext.Session.Set<Empleado>("EmpleadoLogueado", userCheck);
                     return RedirectToAction("Index", "User");
                 }

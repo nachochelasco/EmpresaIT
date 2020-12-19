@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_LayoutUser.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Admin\\AgregarEmpleado.cshtml",
       "TargetPath": "Views\\Admin\\AgregarEmpleado.cshtml",
       "FileKind": "mvc"
@@ -14414,11 +14419,6 @@
     {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Login\\UserAccount.cshtml",
       "TargetPath": "Views\\Login\\UserAccount.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14447,8 +14447,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_LayoutHome.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutHome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Nacho\\Desktop\\EmpresaIT\\Views\\Shared\\_LayoutAdmin.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutAdmin.cshtml",
       "FileKind": "mvc"
     },
     {

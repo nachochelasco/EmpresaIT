@@ -26,7 +26,7 @@ namespace EmpresaIT.Controllers
             Empresa empresa = HttpContext.Session.Get<Empresa>("EmpresaLogueada");
             if ( empresa != null) {
                 List<Empleado> empleadosList = new List<Empleado>();
-                empleadosList = db.Empleados.Where(e => e.Empresa.Nombre.Equals(empresa.Nombre)).ToList() ;
+                empleadosList = db.Empleados.Where(e => e.Empresa.Email.Equals(empresa.Email)).ToList() ;
                 return View("Index",empleadosList);
             }
             else {
@@ -37,7 +37,7 @@ namespace EmpresaIT.Controllers
 
         [HttpGet]
         public IActionResult Empleado(int id) {
-            Empleado empleado = db.Empleados.Find(id) ;
+            Empleado empleado = db.Empleados.FirstOrDefault(e => e.ID == id) ;
             this.ViewBag.NombreCompleto = empleado.NombreCompleto ;
             this.ViewBag.PuestoDeTrabajo = empleado.PuestoDeTrabajo ;
             this.ViewBag.Sueldo = empleado.Sueldo ;
@@ -48,15 +48,17 @@ namespace EmpresaIT.Controllers
         }
 
         [HttpPost]
-        public IActionResult AgregarEmpleado(string nombreCompleto, string email, int edad, string sexo, string puesto, int sueldo) 
+        public IActionResult AgregarEmpleado(int id,string nombreCompleto, string email, int edad, string sexo, string puesto, int sueldo) 
         {
             Empresa empresa = HttpContext.Session.Get<Empresa>("EmpresaLogueada");
             if ( empresa != null) {
 
                 Empresa empresaFind = db.Empresas.FirstOrDefault(e => e.Email.Equals(empresa.Email));
                 Empleado nuevoEmpleado = new Empleado{
+                ID = id,
                 NombreCompleto = nombreCompleto,
                 Email = email,
+                Contraseña = nombreCompleto,
                 Edad = edad,
                 Sexo = sexo,
                 PuestoDeTrabajo = puesto,
@@ -75,7 +77,7 @@ namespace EmpresaIT.Controllers
                                 "<div><p>Para acceder a la aplicacion se te dará una cuenta , la cual posee un email y un nombre de usuario.</div></p>" +
                                 "<div><p>Tus datos son los siguientes :</div></p> " +
                                 "<ul><li><div><p>Email :" + email + "</li></div></p>" +
-                                "<li><div><p>Nombre :" + nombreCompleto + "</li></div></p></ul>" +
+                                "<li><div><p>Contraseña :" + nombreCompleto + "</li></div></p></ul>" +
                                 "<div><p>Estamos a disposicion por cualquier consulta que tengas.</p></div>"+
                                 "<div><p>Saludos Cordiales</div></p>";
                
@@ -110,10 +112,11 @@ namespace EmpresaIT.Controllers
         }
         
          [HttpPost]
-        public IActionResult Editar(int ID, string nombreCompleto, string email, int edad, string sexo, string puesto, int sueldo)
+        public IActionResult Editar(int id,string nombreCompleto, string email,string contraseña, int edad, string sexo, string puesto, int sueldo)
         {
-            Empleado empleadoEdit = db.Empleados.FirstOrDefault(e => e.ID == ID);
+            Empleado empleadoEdit = db.Empleados.FirstOrDefault(e => e.ID == id);
             empleadoEdit.Email = email;
+            empleadoEdit.Contraseña = contraseña;
             empleadoEdit.Edad = edad ;
             empleadoEdit.Sexo = sexo ;
             empleadoEdit.PuestoDeTrabajo = puesto ;
@@ -126,9 +129,9 @@ namespace EmpresaIT.Controllers
         }
 
 
-        public IActionResult EliminarEmpleado(int ID)
+        public IActionResult EliminarEmpleado(int id)
         {
-            Empleado empleado = db.Empleados.FirstOrDefault(e => e.ID == ID);
+            Empleado empleado = db.Empleados.FirstOrDefault(e => e.ID == id);
             
             db.Empleados.Remove(empleado);
             db.SaveChanges();

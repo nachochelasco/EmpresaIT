@@ -17,18 +17,22 @@ namespace EmpresaIT.Migrations
 
             modelBuilder.Entity("EmpresaIT.Models.Empleado", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Contraseña")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Edad")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("EmpresaEmail")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("EmpresaID")
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("NombreCompleto")
@@ -46,20 +50,19 @@ namespace EmpresaIT.Migrations
                     b.Property<int>("Sueldo")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ID");
+                    b.HasKey("Email");
 
-                    b.HasIndex("EmpresaID");
+                    b.HasIndex("EmpresaEmail");
 
                     b.ToTable("Empleados");
                 });
 
             modelBuilder.Entity("EmpresaIT.Models.Empresa", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Contraseña")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -67,7 +70,7 @@ namespace EmpresaIT.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ID");
+                    b.HasKey("Email");
 
                     b.ToTable("Empresas");
                 });
@@ -76,7 +79,7 @@ namespace EmpresaIT.Migrations
                 {
                     b.HasOne("EmpresaIT.Models.Empresa", "Empresa")
                         .WithMany("Empleados")
-                        .HasForeignKey("EmpresaID")
+                        .HasForeignKey("EmpresaEmail")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -5,15 +5,19 @@ namespace EmpresaIT.Models
 {
     public class Empleado
     {   
-        [Key]
+        
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID {get;set;}
-
+       
         [Required]
         public string NombreCompleto {get;set;}
 
+        [Key]
         [Required]
         public string Email {get;set;}
+
+        [Required]
+        public string Contraseña {get;set;}
 
         [Required]
         public int Edad {get;set;}

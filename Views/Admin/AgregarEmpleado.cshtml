@@ -7,15 +7,18 @@
     <div class="col-md-4">
         <form method="POST" asp-action="AgregarEmpleado" asp-controller="Admin">
             <div class="form-group">
+                <label for="titulo">ID</label>
+                <input class="form-control" type="text" name="ID" placeholder="Ingrese un ID" required /><br/>
+
                 <label for="titulo">Nombre</label>
-                <input class="form-control" type="text" name="nombreCompleto" placeholder="Ingrese su nombre completo" required /><br/>
+                <input class="form-control" type="text" name="nombreCompleto" placeholder="Ingrese un nombre" required /><br/>
 
 
                 <label for="cuerpo">Email</label>
-                <input class="form-control" type="text" name="email" placeholder="Ingrese su email" required /><br/>
+                <input class="form-control" type="text" name="email" placeholder="Ingrese un email" required /><br/>
 
                 <label for="cuerpo">Edad</label>
-                <input class="form-control" type="text" name="edad" placeholder="Ingrese su edad" required /><br/>
+                <input class="form-control" type="text" name="edad" placeholder="Ingrese un edad" required /><br/>
 
                 Género:
                     <select name="sexo">
@@ -34,7 +37,7 @@
                     </select><br/><br/>
 
                 <label for="cuerpo">Sueldo</label>
-                <input class="form-control" type="text" name="sueldo" placeholder="Ingrese su sueldo" required /><br/>
+                <input class="form-control" type="text" name="sueldo" placeholder="Ingrese un sueldo" required /><br/>
 
                 <button class="btn btn-success" type="submit" > Agregar </button>
                 

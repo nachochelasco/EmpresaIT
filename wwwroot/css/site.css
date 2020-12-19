@@ -3,10 +3,18 @@ for details on configuring this project to bundle and minify static web assets. 
 * {
   background-image: url(../images/fondoHome.jpg);
 }
+
+.columnaIzq {
+  background-color: rgb(71, 71, 236);
+}
 .nombreEmpleado {
   text-align:left;
   font-size:350%;
   font-weight: bold;
+}
+
+p {
+  font-size: 150%;
 }
 
 .nombreEmpl {
@@ -40,9 +48,9 @@ img {
 }
 
 .img-empleado {
-  margin-top: 20%;
+  margin-top: 10%;
   height: 90%;
-  width: 150%; 
+  width: 100%; 
 }
 
 

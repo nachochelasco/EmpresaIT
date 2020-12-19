@@ -2,8 +2,16 @@ body {
     background-image: url(../images/foto-home.jpg);
 }
 
+.btn {
+  margin-left: 17%;
+  margin-top: 2%;
+  width: 60%;
+  border-radius: 2em;
+}
+
 .titulo-home {
     margin-top: 15%;
+    margin-bottom: 10%;
     font-size: 350%;
     text-align: center;
 }

@@ -28,7 +28,7 @@ namespace EmpresaIT.Controllers
             
 
             if ( empleado != null) {
-                Empresa empresaEmpleado = db.Empleados.Include(e => e.Empresa).FirstOrDefault(e => e.ID == empleado.ID).Empresa ;
+                Empresa empresaEmpleado = db.Empleados.Include(e => e.Empresa).FirstOrDefault(e => e.Email == empleado.Email).Empresa ;
                 List<Empleado> empleadosList = new List<Empleado>();
                 
                 empleadosList = db.Empleados.Where(e => e.Empresa.Nombre.Equals(empresaEmpleado.Nombre)).ToList() ;   
